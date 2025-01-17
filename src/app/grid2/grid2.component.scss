@@ -1,0 +1,188 @@
+
+
+/* Grid Wrapper Styling */
+.grid__wrapper {
+  margin: 0 auto;
+  padding: 8px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Grid Styling */
+igx-grid {
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 3rem;
+}
+
+.igx-grid-header {
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #495057;
+  padding: 10px;
+}
+
+.igx-grid-row {
+  &:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  &:hover {
+    background-color: #f1f3f5;
+  }
+}
+
+.igx-grid-cell {
+  padding: 6px;
+  font-size: 0.85rem;
+  color: #495057;
+}
+
+.igx-grid-cell input, .igx-grid-cell select {
+  padding: 4px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+.igx-grid-cell input:focus, .igx-grid-cell select:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+/* Sorting Header Styling */
+igx-column[sortable] .igx-grid-header {
+  cursor: pointer;
+  position: relative;
+  padding-right: 30px; /* Make space for the sorting icon */
+}
+
+igx-column[sortable] .igx-grid-header:after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #495057; /* Downward arrow */
+}
+
+igx-column[sortable].igx-column.sorted .igx-grid-header:after {
+  border-top: none;
+  border-bottom: 5px solid #495057; /* Upward arrow when sorted ascending */
+}
+
+/* Sorting Indicator (Arrows) */
+igx-column.sorted .igx-grid-header {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Checkbox Styling */
+igx-checkbox {
+  font-size: 0.85rem;
+  padding: 4px;
+}
+
+/* Paginator Styling */
+igx-paginator {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+igx-paginator .igx-button {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #495057;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+}
+
+igx-paginator .igx-button:hover {
+  background-color: #d6d8db;
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  h4 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .grid__wrapper {
+    padding: 4px;
+    max-width: 100%;
+  }
+
+  igx-grid {
+    width: 100%;
+    font-size: 0.75rem;
+    overflow-x: auto;
+  }
+
+  .igx-grid-header {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .igx-grid-cell {
+    padding: 4px;
+    font-size: 0.75rem;
+  }
+
+  .igx-grid-cell input, .igx-grid-cell select {
+    padding: 3px;
+    font-size: 0.7rem;
+  }
+
+  button {
+    font-size: 0.7rem;
+  }
+
+  igx-paginator {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+
+  igx-paginator .igx-button {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  igx-grid {
+    font-size: 0.7rem;
+    width: 100%;
+  }
+
+  .igx-grid-header {
+    font-size: 0.7rem;
+    padding: 4px;
+  }
+
+  .igx-grid-cell {
+    padding: 3px;
+    font-size: 0.65rem;
+  }
+
+  igx-paginator {
+    font-size: 0.65rem;
+  }
+
+  igx-paginator .igx-button {
+    font-size: 0.65rem;
+  }
+
+  .grid__wrapper {
+    padding: 2px;
+  }
+}

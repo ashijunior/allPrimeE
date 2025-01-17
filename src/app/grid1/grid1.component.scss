@@ -1,0 +1,154 @@
+
+
+/* Grid Wrapper Styling */
+.grid__wrapper {
+  margin: 0 auto;
+  padding: 8px; /* Reduced padding for smaller screens */
+  max-width: 100%; /* Full width for small screens */
+  overflow-x: auto; /* Horizontal scroll for small screens */
+}
+
+/* Grid Styling */
+igx-grid {
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid #e1e1e1;
+  width: 100%; /* Ensure the grid takes full width */
+  overflow-x: auto; /* Horizontal scrolling for large tables */
+  margin-bottom: 3rem;
+
+  .igx-grid-header {
+    background-color: #f8f9fa;
+    font-size: 0.9rem; /* Smaller font size for headers */
+    font-weight: 600;
+    color: #495057;
+    padding: 10px; /* Adjust padding for a compact look */
+  }
+
+  .igx-grid-row {
+    &:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+    &:hover {
+      background-color: #f1f3f5;
+    }
+  }
+
+  .igx-grid-cell {
+    padding: 6px; /* Reduced padding in cells */
+    font-size: 0.85rem; /* Smaller font size for grid cells */
+    color: #495057;
+  }
+
+  .igx-grid-cell input, .igx-grid-cell select {
+    padding: 4px; /* Reduced padding for input/select elements */
+    font-size: 0.85rem; /* Smaller font size for inputs and selects */
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+  }
+
+  .igx-grid-cell input:focus, .igx-grid-cell select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+  }
+}
+
+/* Paginator Styling */
+igx-paginator {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+igx-paginator .igx-button {
+  font-size: 0.85rem; /* Smaller font size for pagination buttons */
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #495057;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+}
+
+igx-paginator .igx-button:hover {
+  background-color: #d6d8db; /* Darker background on hover */
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  p {
+    font-size: 1rem; /* Smaller title size for small screens */
+    margin-bottom: 15px;
+  }
+
+  .grid__wrapper {
+    padding: 4px; /* Further reduce padding on small screens */
+    max-width: 100%; /* Ensure full width on small screens */
+  }
+
+  igx-grid {
+    width: 100%; /* Ensure grid takes full width */
+    font-size: 0.75rem; /* Reduce font size for grid on small screens */
+    overflow-x: auto; /* Horizontal scrolling for grid on small screens */
+  }
+
+  .igx-grid-header {
+    font-size: 0.8rem; /* Smaller font size for grid headers on small screens */
+    padding: 6px;
+  }
+
+  .igx-grid-cell {
+    padding: 4px; /* Further reduce padding on grid cells for small screens */
+    font-size: 0.75rem; /* Even smaller font size for grid cells */
+  }
+
+  .igx-grid-cell input, .igx-grid-cell select {
+    padding: 3px; /* Even smaller padding for inputs and selects */
+    font-size: 0.7rem;
+  }
+
+  button {
+    font-size: 0.7rem; /* Smaller font size for buttons on small screens */
+  }
+
+  /* Paginator Styles for Small Screens */
+  igx-paginator {
+    font-size: 0.75rem; /* Reduce paginator font size */
+    padding: 8px;
+  }
+
+  igx-paginator .igx-button {
+    font-size: 0.7rem; /* Even smaller font size for paginator buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  igx-grid {
+    font-size: 0.7rem; /* Even smaller font size on very small screens */
+    width: 100%; /* Ensure full width on small screens */
+  }
+
+  h4{
+    font-size: 2rem;
+  }
+
+  .igx-grid-header {
+    font-size: 0.7rem; /* Smaller font size for headers */
+    padding: 4px; /* Further reduce padding */
+  }
+
+  .igx-grid-cell {
+    padding: 3px; /* Even smaller padding for grid cells on very small screens */
+    font-size: 0.65rem; /* Smaller font size for cells on very small screens */
+  }
+
+  /* Paginator Styles for Small Screens */
+  igx-paginator {
+    font-size: 0.65rem; /* Smaller font size for paginator */
+    padding: 6px;
+  }
+
+  igx-paginator .igx-button {
+    font-size: 0.65rem; /* Smaller font size for paginator buttons on very small screens */
+  }
+}

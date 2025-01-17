@@ -1,0 +1,23 @@
+<h4 class="text-primary mb-4">Filtering</h4>
+
+<div class="grid__wrapper">
+  <igx-grid #grid1 [data]="localData" primaryKey="EmployeeID" [width]="'100%'" height="550px" [allowFiltering]="true">
+    <igx-column field="FirstName" header="First Name" width="150px"></igx-column>
+    <igx-column field="LastName" header="Last Name" width="150px"></igx-column>
+    <igx-column field="Country" width="140px"></igx-column>
+    <igx-column field="Age" width="110px" dataType="number"></igx-column>
+    <igx-column field="RegistererDate" header="Registerer Date" width="180px" dataType="date">
+      <ng-template igxCell let-value>
+        {{ value | date }}
+      </ng-template>
+    </igx-column>
+    <igx-column field="IsActive" header="Is Active" width="140px" dataType="boolean">
+      <ng-template igxCell let-cell="cell">
+        <igx-checkbox [checked]="cell.value" [disabled]="true"></igx-checkbox>
+      </ng-template>
+    </igx-column>
+
+    <!-- Advanced Filtering Dialog -->
+    <igx-advanced-filtering-dialog></igx-advanced-filtering-dialog>
+  </igx-grid>
+</div>

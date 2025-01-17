@@ -1,0 +1,12 @@
+/* Change navbar link color on hover */
+.navbar-nav .nav-link:hover {
+  color: #007bff !important; /* Change this to any color you like */
+  background-color: #f1f3f5; /* Add a background color to highlight on hover */
+  border-radius: 4px; /* Optional: rounded corners for a smooth effect */
+}
+
+/* Make active links bold and maintain their hover effect */
+.navbar-nav .nav-link.active {
+  font-weight: 600;
+  color: #007bff !important;
+}
