@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Employee, employeesData } from './localData';
 
 @Component({
   selector: 'app-grid4',
   templateUrl: './grid4.component.html',
   styleUrls: ['./grid4.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class Grid4Component implements OnInit {
   public localData: Employee[] = [];

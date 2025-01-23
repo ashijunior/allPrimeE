@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Employee, employeesData } from './localData';
 import { ISortingOptions } from 'igniteui-angular';
 
@@ -6,7 +6,8 @@ import { ISortingOptions } from 'igniteui-angular';
   selector: 'app-grid2',
   templateUrl: './grid2.component.html',
   styleUrls: ['./grid2.component.scss'],
-  standalone: false
+  standalone: false,
+  encapsulation: ViewEncapsulation.None,
 })
 export class Grid2Component implements OnInit {
   public localData: Employee[] = [];
